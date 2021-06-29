@@ -126,45 +126,57 @@ brew "gh"
 # Programming language prerequisites and package managers
 brew "libyaml" # should come after openssl
 brew "coreutils"
-brew "yarn"
-cask "gpg-suite"
+brew "n"
+brew "npm"
+EOF
 
-fancy_echo "Configuring asdf version manager ..."
-if [ ! -d "$HOME/.asdf" ]; then
-  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.5.0
-  append_to_zshrc "source $HOME/.asdf/asdf.sh" 1
+# Check for Node
+if test ! $(brew list | grep node); then
+  komputer_echo 'Installing Node...'
+  brew install node
+else
+  komputer_echo 'Node already installed. Skipping...'
 fi
 
-alias install_asdf_plugin=add_or_update_asdf_plugin
-add_or_update_asdf_plugin() {
-  local name="$1"
-  local url="$2"
+fancy_echo "Installing Node LTS (requires sudo) ..."
+sudo n lts
 
-  if ! asdf plugin-list | grep -Fq "$name"; then
-    asdf plugin-add "$name" "$url"
+npm install -g npm-check-updates
+npm install -g prettier
+
+
+applications=(
+  amphetamine
+  google-chrome
+  firefox
+  iterm2
+  visual-studio-code
+  the-unarchiver
+  slack
+  docker
+  spotify
+  notion
+  slack
+  zoom
+  github
+)
+
+install_application() {
+  if test ! $(brew list | grep $application); then
+    brew install --cask --appdir="/Applications" $application
+    fancy_echo "$application installing"
   else
-    asdf plugin-update "$name"
+    fancy_echo "$application already installed. Skipping ..."
   fi
 }
 
-# shellcheck disable=SC1090
-source "$HOME/.asdf/asdf.sh"
-add_or_update_asdf_plugin "nodejs" "https://github.com/asdf-vm/asdf-nodejs.git"
+for application in "${applications[@]}"
+  do install_application $application
+done
 
-install_asdf_language() {
-  local language="$1"
-  local version
-  version="$(asdf list-all "$language" | grep -v "[a-z]" | tail -1)"
-
-  if ! asdf list "$language" | grep -Fq "$version"; then
-    asdf install "$language" "$version"
-    asdf global "$language" "$version"
-  fi
-}
-
-fancy_echo "Installing latest Node ..."
-bash "$HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring"
-install_asdf_language "nodejs"
+# Clean up Homebrew files
+fancy_echo "Cleaning up Homebrew ..."
+brew cleanup
 
 if [ -f "$HOME/.laptop.local" ]; then
   fancy_echo "Running your customizations from ~/.laptop.local ..."

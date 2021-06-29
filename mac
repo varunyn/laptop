@@ -144,6 +144,21 @@ sudo n lts
 npm install -g npm-check-updates
 npm install -g prettier
 
+fancy_echo "Installing Ruby stable ..."
+echo "gem: --no-document" >> ~/.gemrc
+eval "$(rbenv init -)"
+latest_ruby() {
+  rbenv install -l | grep -E '^\d' - | sort | tail -1
+}
+rbenv install $(latest_ruby)
+rbenv global $(latest_ruby)
+
+sudo gem update --system
+gem_install_or_update 'bundler'
+number_of_cores=$(sysctl -n hw.ncpu)
+bundle config --global jobs $((number_of_cores - 1))
+
+# Credit to https://github.com/lachlanjc/laptop/blob/main/mac
 
 applications=(
   amphetamine

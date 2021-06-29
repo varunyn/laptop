@@ -74,30 +74,17 @@ macOS tools:
 
 Unix tools:
 
-* [Universal Ctags] for indexing files for vim tab completion
 * [Git] for version control
 * [OpenSSL] for Transport Layer Security (TLS)
-* [RCM] for managing company and personal dotfiles
 * [The Silver Searcher] for finding things in files
-* [Tmux] for saving project state and switching between projects
 * [Watchman] for watching for filesystem events
 * [Zsh] as your shell
 
-[Universal Ctags]: https://ctags.io/
 [Git]: https://git-scm.com/
 [OpenSSL]: https://www.openssl.org/
-[RCM]: https://github.com/thoughtbot/rcm
 [The Silver Searcher]: https://github.com/ggreer/the_silver_searcher
-[Tmux]: http://tmux.github.io/
 [Watchman]: https://facebook.github.io/watchman/
 [Zsh]: http://www.zsh.org/
-
-Heroku tools:
-
-* [Heroku CLI] and [Parity] for interacting with the Heroku API
-
-[Heroku CLI]: https://devcenter.heroku.com/articles/heroku-cli
-[Parity]: https://github.com/thoughtbot/parity
 
 GitHub tools:
 
@@ -105,13 +92,9 @@ GitHub tools:
 
 [GitHub CLI]: https://cli.github.com/
 
-Image tools:
-
-* [ImageMagick] for cropping and resizing images
 
 Programming languages, package managers, and configuration:
 
-* [asdf-vm] for managing programming language versions
 * [Bundler] for managing Ruby libraries
 * [Node.js] and [npm], for running apps and installing JavaScript packages
 * [Ruby] stable for writing general-purpose code
@@ -132,6 +115,8 @@ Programming languages, package managers, and configuration:
 * [Slack](https://slack.com/) for more team communication and less email.
 * [Docker](https://www.docker.com/) for buliding, shipping and running applications.
 * [Spotify](https://www.spotify.com/us/) for music.
+* [Zoom](https://zoom.us/)
+* [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704?mt=12)
 
 
 It should take less than 15 minutes to install (depends on your machine).

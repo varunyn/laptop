@@ -141,7 +141,8 @@ Customize in `~/.laptop.local`
 
 Your `~/.laptop.local` is run at the end of the Laptop script.
 Put your customizations there.
-For example:
+<details>
+  <summary>Example customization file</summary>
 
 ```sh
 #!/bin/sh
@@ -178,6 +179,7 @@ if [ -r "$HOME/.rcrc" ]; then
   rcup
 fi
 ```
+</details>
 
 Write your customizations such that they can be run safely more than once.
 See the `mac` script for examples.

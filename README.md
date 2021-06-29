@@ -118,20 +118,21 @@ Programming languages, package managers, and configuration:
 * [Yarn] for managing JavaScript packages
 
 [Bundler]: http://bundler.io/
-[ImageMagick]: http://www.imagemagick.org/
 [Node.js]: http://nodejs.org/
 [npm]: https://www.npmjs.org/
-[asdf-vm]: https://github.com/asdf-vm/asdf
 [Ruby]: https://www.ruby-lang.org/en/
-[Yarn]: https://yarnpkg.com/en/
 
-Databases:
+**Applications:**
 
-* [Postgres] for storing relational data
-* [Redis] for storing key-value data
+* [Google Chrome](https://www.google.com/chrome/) for browsing the web.
+* [Firefox](https://www.mozilla.org/en-US/firefox/new/) for browsing the web also, but mostly for testing. :)
+* [iTerm2](https://www.iterm2.com/) for a better terminal.
+* [VS Code](https://code.visualstudio.com/) as a text editor.
+* [The Unarchiver](http://unarchiver.c3.cx/unarchiver) for extracting archives that are not supported by macOS out of the box.
+* [Slack](https://slack.com/) for more team communication and less email.
+* [Docker](https://www.docker.com/) for buliding, shipping and running applications.
+* [Spotify](https://www.spotify.com/us/) for music.
 
-[Postgres]: http://www.postgresql.org/
-[Redis]: http://redis.io/
 
 It should take less than 15 minutes to install (depends on your machine).
 

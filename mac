@@ -119,6 +119,7 @@ brew "the_silver_searcher"
 brew "vim"
 brew "watchman"
 brew "zsh"
+brew "skaffold"
 
 # GitHub
 brew "gh"

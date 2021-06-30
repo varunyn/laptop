@@ -79,12 +79,14 @@ Unix tools:
 * [The Silver Searcher] for finding things in files
 * [Watchman] for watching for filesystem events
 * [Zsh] as your shell
+* [Skaffold] for k8s
 
 [Git]: https://git-scm.com/
 [OpenSSL]: https://www.openssl.org/
 [The Silver Searcher]: https://github.com/ggreer/the_silver_searcher
 [Watchman]: https://facebook.github.io/watchman/
 [Zsh]: http://www.zsh.org/
+[Skaffold]: https://skaffold.dev/
 
 GitHub tools:
 

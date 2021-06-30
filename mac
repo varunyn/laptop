@@ -120,6 +120,7 @@ brew "vim"
 brew "watchman"
 brew "zsh"
 brew "skaffold"
+brew "terraform"
 
 # GitHub
 brew "gh"

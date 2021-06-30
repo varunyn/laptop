@@ -80,6 +80,7 @@ Unix tools:
 * [Watchman] for watching for filesystem events
 * [Zsh] as your shell
 * [Skaffold] for k8s
+* [Terraform] for Infrastructure as Code
 
 [Git]: https://git-scm.com/
 [OpenSSL]: https://www.openssl.org/
@@ -87,6 +88,7 @@ Unix tools:
 [Watchman]: https://facebook.github.io/watchman/
 [Zsh]: http://www.zsh.org/
 [Skaffold]: https://skaffold.dev/
+[Terraform]: https://www.terraform.io/
 
 GitHub tools:
 

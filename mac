@@ -121,6 +121,8 @@ brew "watchman"
 brew "zsh"
 brew "skaffold"
 brew "terraform"
+brew "gitmoji"
+brew "bat"
 
 # GitHub
 brew "gh"
